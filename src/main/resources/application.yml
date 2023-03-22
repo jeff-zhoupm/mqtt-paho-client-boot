@@ -1,0 +1,17 @@
+server:
+  port: 8888
+  use-forward-headers: true
+  tomcat:
+    remote-ip-header: X-Real-IP
+    protocol-header: X-Forwarded-Proto
+mqtt: 
+  host: tcp://127.0.0.1:1883
+  clientInId : D20815086205  #客户端ID  唯一不可重复
+  serviceId : test   #服务ID
+  clientOutId : D20815086206 #订阅客户端ID
+  topic : /v1/devices/test
+  qosLevel : 2
+  username : admin
+  password : 123456
+  timeout : 20
+  keepalive : 20
